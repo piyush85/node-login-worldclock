@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Node.js Login</title>
+    <link rel="stylesheet" href="/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body></body>
+  <!-- preset form values if we receive a userdata object //-->
+  <!-- store the userId on the client side in a hidden input field //-->
+  <input type="hidden" id="userId">
+  <div id="account-form-container">
+    <form method="post" id="account-form" class="form-horizontal well span6">
+      <h1></h1>
+      <p id="sub1" class="subheading">New Account</p>
+      <hr>
+      <fieldset>
+        <div id="name-cg" class="control-group">
+          <label for="name-tf" class="control-label">Name</label>
+          <div class="controls">
+            <input id="name-tf" type="text" name="name" class="input-xlarge">
+          </div>
+        </div>
+        <div id="email-cg" class="control-group">
+          <label for="email-tf" class="control-label">Email</label>
+          <div class="controls">
+            <input id="email-tf" type="text" name="email" class="input-xlarge">
+          </div>
+        </div>
+        <hr>
+        <p id="sub2" class="subheading"></p>
+        <div id="user-cg" class="control-group">
+          <label for="user-tf" class="control-label">Username</label>
+          <div class="controls">
+            <input id="user-tf" type="text" name="user" class="input-xlarge disabled">
+          </div>
+        </div>
+        <div id="pass-cg" class="control-group">
+          <label for="pass-tf" class="control-label">Password</label>
+          <div class="controls">
+            <input id="pass-tf" type="password" name="pass" value="" class="input-xlarge">
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="button" id="account-form-btn1" class="btn"></button>
+          <button type="submit" id="account-form-btn2" class="btn"></button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <!-- display form errors in a custom modal window //-->
+  <div class="modal-form-errors modal hide fade">
+    <div class="modal-header">
+      <button data-dismiss="modal" class="close">x</button>
+      <h3>Whoops!</h3>
+    </div>
+    <div class="modal-body">
+      <p class="subheading">It looks like there was a problem.</p>
+      <ul></ul>
+    </div>
+    <div class="modal-footer">
+      <button data-dismiss="modal" class="btn btn-warning">OK</button>
+    </div>
+  </div>
+  <div class="modal-alert modal hide fade">
+    <div class="modal-header">
+      <button data-dismiss="modal" class="close">x</button>
+      <h3></h3>
+    </div>
+    <div class="modal-body">
+      <p></p>
+    </div>
+    <div class="modal-footer">
+      <button data-dismiss="modal" id="ok" class="btn btn-warning">OK</button>
+    </div>
+  </div>
+  <script src="/vendor/jquery.min.js"></script>
+  <script src="/vendor/jquery.form.js"></script>
+  <script src="/vendor/bootstrap-modal.js"></script>
+  <script src="/vendor/bootstrap-transition.js"></script>
+  <script src="/js/views/signup.js"></script>
+  <script src="/js/controllers/signupController.js"></script>
+  <script src="/js/form-validators/accountValidator.js"></script>
+</html>
