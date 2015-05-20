@@ -1,19 +1,6 @@
 {
-	"name": "node-login",
-	"version": "1.3.2",
-	"description": "A template for quickly building login systems on top of Node.js & MongoDb",
-	"author": {
-		"name": "Stephen Braitsch",
-		"email": "stephen@braitsch.io"
-	},
-	"website":{
-		"url": "node-login.braitsch.io"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/braitsch/node-login.git"
-	},
-	"private": true,
+	"name": "node-login-worldclock",
+	"version": "1.0.0",
 	"dependencies": {
 		"express": "3.0.6",
 		"stylus": "0.50.0",
